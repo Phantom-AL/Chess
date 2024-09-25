@@ -1,0 +1,158 @@
+{% extends 'MainChess/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <div class="container mt-5">
+        <h2 class="text-center mb-4" style="color: #4CAF50;">ТОП шахматных игроков 2024 года</h2>
+
+        <!-- Описание статьи -->
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <p class="lead text-center">Мы собрали для вас список лучших шахматных игроков мира 2024 года. Эти
+                    игроки показали наилучшие результаты на международных турнирах и завоевали признание среди шахматной
+                    элиты.</p>
+            </div>
+        </div>
+
+        <!-- Карточки ТОП игроков -->
+        <div class="row">
+            <!-- Игрок 1 -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card shadow-sm mb-4">
+                    <img src="{% static 'images/magnus.jfif' %}" class="card-img-top" alt="Магнус Карлсен">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" style="color: #4CAF50;">Магнус Карлсен</h5>
+                        <p class="card-text flex-grow-1">Магнус Карлсен — норвежский шахматный гроссмейстер, пятикратный
+                            чемпион мира по шахматам. Его игра отличается высокой точностью и стратегической
+                            глубиной.</p>
+                        <a href="{% url 'magnus_carlsen' %}" class="btn btn-info mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Игрок 2 -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card shadow-sm mb-4">
+                    <img src="{% static 'images/gukesh.jfif' %}" class="card-img-top" alt="Гукеш Доммараджу">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" style="color: #4CAF50;">Гукеш Доммараджу</h5>
+                        <p class="card-text flex-grow-1">Гукеш Доммараджу — индийский шахматный гроссмейстер, один из
+                            самых молодых гроссмейстеров в истории. Известен своей агрессивной игрой и тактическим
+                            мастерством.</p>
+                        <a href="{% url 'gukesh-dommaraju' %}" class="btn btn-info mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Игрок 3 -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card shadow-sm mb-4">
+                    <img src="{% static 'images/karuano.jfif' %}" class="card-img-top" alt="Фабиано Каруана">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" style="color: #4CAF50;">Фабиано Каруана</h5>
+                        <p class="card-text flex-grow-1">Фабиано Каруана — американский шахматный гроссмейстер и
+                            претендент на титул чемпиона мира. Известен своей атакующей игрой и высоким уровнем
+                            подготовки к турнирам.</p>
+                        <a href="{% url 'fabiano_caruana' %}" class="btn btn-info mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Следующий ряд игроков -->
+        <div class="row">
+            <!-- Игрок 4 -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card shadow-sm mb-4">
+                    <img src="{% static 'images/anisihi.jfif' %}" class="card-img-top" alt="Аниш Гири">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" style="color: #4CAF50;">Аниш Гири</h5>
+                        <p class="card-text flex-grow-1">Аниш Гири — голландский гроссмейстер, известный своим
+                            уникальным стилем игры и глубокими аналитическими способностями. Постоянный участник
+                            крупнейших шахматных турниров.</p>
+                        <a href="{% url 'anish_giri' %}" class="btn btn-info mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Игрок 5 -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card shadow-sm mb-4">
+                    <img src="{% static 'images/ian.jfif' %}" class="card-img-top" alt="Ян Непомнящий">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" style="color: #4CAF50;">Ян Непомнящий</h5>
+                        <p class="card-text flex-grow-1">Ян Непомнящий — российский гроссмейстер, известный своей
+                            быстрой игрой и агрессивным стилем. Претендент на звание чемпиона мира в 2021 и 2023
+                            годах.</p>
+                        <a href="{% url 'ian_nepomniachtchi' %}" class="btn btn-info mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Игрок 6 -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card shadow-sm mb-4">
+                    <img src="{% static 'images/hikaru.jfif' %}" class="card-img-top" alt="Хикару Накамура">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" style="color: #4CAF50;">Хикару Накамура</h5>
+                        <p class="card-text flex-grow-1">Хикару Накамура — американский шахматный гроссмейстер,
+                            известный как мастер блица. Он также популярный стример, привлекающий тысячи зрителей во
+                            время своих трансляций.</p>
+                        <a href="{% url 'hikaru_nakamura' %}" class="btn btn-info mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Последний ряд игроков -->
+        <div class="row">
+            <!-- Игрок 7 -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card shadow-sm mb-4">
+                    <img src="{% static 'images/walesy.jfif' %}" class="card-img-top" alt="Уэсли Со">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" style="color: #4CAF50;">Уэсли Со</h5>
+                        <p class="card-text flex-grow-1">Уэсли Со — филиппино-американский шахматист, один из сильнейших
+                            гроссмейстеров своего поколения, с множеством международных титулов и наград.</p>
+                        <a href="{% url 'wesley_so' %}" class="btn btn-info mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Игрок 8 -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card shadow-sm mb-4">
+                    <img src="{% static 'images/maxim.jfif' %}" class="card-img-top" alt="Максим Вашье-Лаграв">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" style="color: #4CAF50;">Максим Вашье-Лаграв</h5>
+                        <p class="card-text flex-grow-1">Максим Вашье-Лаграв — французский гроссмейстер, известный своим
+                            атакующим стилем и нестандартными дебютами. Один из самых популярных шахматистов в
+                            Европе.</p>
+                        <a href="{% url 'maxime_vachier_lagrave' %}" class="btn btn-info mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Игрок 9 -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="card shadow-sm mb-4">
+                    <img src="{% static 'images/levon.jfif' %}" class="card-img-top" alt="Левон Аронян">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" style="color: #4CAF50;">Левон Аронян</h5>
+                        <p class="card-text flex-grow-1">Левон Аронян — армянский гроссмейстер и один из ведущих
+                            шахматистов мира. Его стиль характеризуется агрессивными комбинациями и смелыми ходами.</p>
+                        <a href="{% url 'levon_aronian' %}" class="btn btn-info mt-auto">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <p class="text-center">Этот список основан на результатах последних международных турниров и рейтингов
+                    ФИДЕ на 2024 год.</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

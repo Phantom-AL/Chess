@@ -1,0 +1,134 @@
+
+h1 {
+    font-size: 36px;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.first-p {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+/* Делаем фон прозрачным */
+    color: #333; /* Меняем цвет текста на темный */
+    position: static; /* Закрепляем шапку в верхней части экрана */
+    top: 0; /* Подтягиваем шапку к верхнему краю экрана */
+    left: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 1000; /* Шапка будет находиться выше других элементов */
+}
+
+
+.header-content {
+    display: flex;
+    justify-content: flex-start; /* Размещаем элементы по краям */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Устанавливаем максимальную ширину, чтобы содержимое не растягивалось слишком сильно */
+    margin: 0 auto; /* Центрируем контейнер с помощью авто отступов по бокам */
+    padding: 0 20px; /* Горизонтальные отступы для контейнера */
+
+}
+
+
+/* Логотип */
+.logo {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* Устанавливаем высоту логотипа */
+    width: auto; /* Ширина автоматически подстраивается под высоту */
+    color: darkslateblue;
+}
+
+.nav-menu {
+    display: flex; /* Включаем Flexbox для контейнера */
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    margin-left: 20px;
+
+}
+
+.nav-list {
+    display: flex;
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    justify-content: flex-start; /* Центрируем элементы по горизонтали */
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+}
+
+
+
+.nav-link {
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #007bff; /* Оставляем синий цвет ссылок */
+    font-size: 18px;
+    transition: color 0.3s ease;
+    line-height: 1;
+}
+
+.nav-link:hover {
+    color: #0056b3; /* Темно-синий при наведении */
+}
+
+/* Кнопки авторизации */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; /* Сдвигаем кнопки авторизации вправо */
+    align-items: center; /* Центрируем кнопки по вертикали */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn {
+    background-color: transparent; /* Фон кнопки "Войти" тоже прозрачный */
+    color: #007bff; /* Синий цвет текста */
+    border: 2px solid #007bff;
+}
+
+.login-btn:hover {
+    background-color: #007bff;
+    color: #fff; /* Белый текст при наведении */
+}
+
+.register-btn {
+    background-color: #ffab00;
+    color: #fff;
+}
+
+.register-btn:hover {
+    background-color: #ff8800;
+}

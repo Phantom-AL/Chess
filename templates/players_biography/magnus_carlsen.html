@@ -1,0 +1,64 @@
+{% extends 'MainChess/base.html' %}
+
+{% block content %}
+    {% load static %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2 class="mb-4" style="color: #4CAF50;">Магнус Карлсен</h2>
+            <p class="lead">Пятикратный чемпион мира по шахматам, рекордсмен по рейтингу ФИДЕ</p>
+        </div>
+    </div>
+    
+    <!-- Основная информация с карточкой -->
+   <div class="row mb-4" style="background-color: #F8F3FF; padding: 20px; border-radius: 10px;">
+        <div class="col-md-4">
+            <img src="{% static 'images/magnus.jfif' %}" class="img-fluid rounded shadow" alt="Магнус Карлсен">
+        </div>
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h4 class="card-title" style="color: #4CAF50;">Биография</h4>
+                    <p class="card-text">Магнус Карлсен родился 30 ноября 1990 года в Тёнсберге, Норвегия. В возрасте 13 лет он уже стал гроссмейстером. В 2013 году Магнус стал чемпионом мира по шахматам, победив Вишванатана Ананда. Его шахматный стиль сочетает гибкость, точность и стратегическую дальновидность.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Достижения с иконками -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h4>Основные достижения</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fas fa-trophy" style="color: #4CAF50;"></i> Чемпион мира по шахматам (2013–2021 гг.)</li>
+                <li class="list-group-item"><i class="fas fa-trophy" style="color: #4CAF50;"></i> Рекордсмен по рейтингу ФИДЕ — 2882 (2014 г.)</li>
+                <li class="list-group-item"><i class="fas fa-chess-king" style="color: #4CAF50;"></i> Многократный победитель турниров Grand Chess Tour и Norway Chess</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Интересные факты и стиль игры -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4>Стиль игры</h4>
+            <p>Карлсен считается мастером эндшпиля и превосходно владеет искусством маневрирования. Его особенность — умение превращать минимальные преимущества в победу, что делает его непредсказуемым и опасным соперником.</p>
+        </div>
+        <div class="col-md-6">
+            <h4>Интересные факты</h4>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-football-ball" style="color: #4CAF50;"></i> Магнус — страстный поклонник футбола и болеет за «Реал Мадрид».</li>
+                <li><i class="fas fa-twitch" style="color: #4CAF50;"></i> Он активно продвигает шахматы в интернете, участвуя в стримах и турнирах.</li>
+                <li><i class="fas fa-medal" style="color: #4CAF50;"></i> В 2013 году был назван одним из самых влиятельных людей мира по версии Time.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Личная жизнь и интересы -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h4>Личная жизнь и интересы</h4>
+            <p>Помимо шахмат, Магнус увлекается спортом, кино и видеоиграми. Он активно участвует в благотворительных инициативах, направленных на развитие шахматного образования среди детей и молодежи.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

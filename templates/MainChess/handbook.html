@@ -1,0 +1,93 @@
+{% extends 'MainChess/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Добавляем фон и стилизуем заголовок -->
+    <div class="hero text-center py-5" style="background: linear-gradient(135deg, #e5c7ca, #bbdefb); border-radius: 10px;">
+        <h1 class="font-weight-bold text-black">Добро пожаловать в шахматный справочник</h1>
+        <p class="lead text-dark-emphasis">Откройте для себя мир шахмат: историю, правила и стратегии, которые помогут вам стать мастером.</p>
+    </div>
+
+    <!-- Разделы о шахматах с картинками и более выразительными кнопками -->
+    <div class="row mt-5">
+        <div class="col-lg-4 text-center">
+            <h3>История шахмат</h3>
+            <p>Узнайте о происхождении и развитии шахмат, одной из старейших интеллектуальных игр.</p>
+            <a href="{% url 'history' %}" class="btn btn-dark btn-lg mt-2">Узнать больше</a>
+        </div>
+
+        <div class="col-lg-4 text-center">
+            <h3>Правила игры</h3>
+            <p>Познакомьтесь с основными правилами игры, чтобы начать свое шахматное путешествие.</p>
+            <a href="{% url 'rules' %}" class="btn btn-dark btn-lg mt-2">Читать правила</a>
+        </div>
+
+        <div class="col-lg-4 text-center">
+            <h3>Шахматные стратегии</h3>
+            <p>Освойте эффективные стратегии и тактики для победы в шахматах.</p>
+            <a href="{% url 'strategies' %}" class="btn btn-dark btn-lg mt-2">Изучить стратегии</a>
+        </div>
+    </div>
+
+    <!-- Популярные статьи с акцентом на визуальные разделители и анимацию -->
+    <div class="row mt-5">
+        <div class="col-lg-12 text-center">
+            <h2 class="mb-4">Популярные статьи</h2>
+        </div>
+
+        <div class="col-lg-4 text-center">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h4>Шахматные турниры</h4>
+                    <p>Откройте для себя самые престижные шахматные турниры мира.</p>
+                    <a href="{% url 'tournaments' %}" class="btn btn-outline-secondary btn-lg mt-2">Читать</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 text-center">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h4>Топ-игроки</h4>
+                    <p>Познакомьтесь с величайшими шахматистами в истории и сегодняшними чемпионами.</p>
+                    <a href="{% url 'top_players' %}" class="btn btn-outline-secondary btn-lg mt-2">Читать</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 text-center">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <h4>Шахматные комбинации</h4>
+                    <p>Изучите ключевые шахматные комбинации для улучшения игры.</p>
+                    <a href="{% url 'combinations' %}" class="btn btn-outline-secondary btn-lg mt-2">Читать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Добавляем стили для улучшения дизайна -->
+<style>
+    
+    .hero {
+        background-size: cover;
+        color: white;
+        padding: 60px 0;
+    }
+    .btn-primary {
+        background-color: #3f51b5;
+        border-color: #3f51b5;
+    }
+    .btn-primary:hover {
+        background-color: #303f9f;
+        border-color: #303f9f;
+    }
+    .card {
+        transition: transform 0.3s ease-in-out;
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
+</style>
+{% endblock %}

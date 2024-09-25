@@ -1,0 +1,28 @@
+{% extends 'MainChess/base.html' %}
+
+
+{% block title %}
+    Игроки
+{% endblock %}
+
+
+
+
+{% block content %}
+    <h2>Игроки</h2>
+    <div class="player-list">
+        {% for player in players %}
+            <div class="player-profile">
+                {% if player.avatar %}
+                    <img src="{{ player.avatar.url }}" alt="{{ player.name }}" class="player-avatar">
+                {% else %}
+                    <img src="/path/to/default-avatar.png" alt="{{ player.name }}" class="player-avatar">
+                {% endif %}
+                <h3>{{ player.name }}</h3>
+                <p>Рейтинг: {{ player.rating }}</p>
+                <a href="{{ player.get_absolute_url }}" class="btn btn-info">Профиль</a>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

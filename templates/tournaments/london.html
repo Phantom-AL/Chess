@@ -1,0 +1,88 @@
+    {% extends 'MainChess/base.html' %}
+
+    {% block content %}
+        <div class="container mt-5">
+            <div class="jumbotron">
+                <h1 class="display-4 text-center" style="color: #4CAF50;">Шахматный Турнир Лондон 2024</h1>
+                <p class="lead text-center">Добро пожаловать на международный шахматный турнир, который пройдет в Лондоне 10
+                    октября 2024 года!</p>
+                <hr class="my-4">
+                <p class="text-center">Дата: <strong>10 октября 2024</strong></p>
+                <p class="text-center">Местоположение: <strong>Лондон, Великобритания</strong></p>
+                <p class="text-center">Участников: <strong>32</strong></p>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #4CAF50; color: white;">
+                    Призовой фонд
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">50,000 фунтов</h5>
+                    <p class="card-text">Призовой фонд турнира распределяется среди победителей. Лучший игрок получит 25,000
+                        фунтов, а остальные призы будут распределены среди занявших призовые места.</p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #4CAF50; color: white;">
+                    Правила турнира
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Швейцарская система в 7 туров</h5>
+                    <p class="card-text">Контроль времени на каждую партию составляет 90 минут. Турнир будет проводиться по
+                        швейцарской системе, которая гарантирует равномерное распределение участников по турнирной таблице
+                        на основе их очков.</p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #4CAF50; color: white;">
+                    Программа турнира
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">09:00 - 09:30: Регистрация участников</li>
+                        <li class="list-group-item">10:00 - 13:00: Первый тур</li>
+                        <li class="list-group-item">13:00 - 14:00: Обеденный перерыв</li>
+                        <li class="list-group-item">14:00 - 18:00: Финальные туры</li>
+                        <li class="list-group-item">18:30: Церемония награждения</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #4CAF50; color: white;">
+                    Дополнительная информация
+                </div>
+                <div class="card-body">
+                    <p>Турнир будет проводиться в известном шахматном клубе Лондона, который предоставляет уникальную
+                        атмосферу для игроков всех уровней. Участники получат сувениры, а победители — памятные кубки и
+                        приглашения на следующие международные турниры.</p>
+                    <p>Для участия в турнире необходимо зарегистрироваться заранее, так как количество мест ограничено.
+                        Регистрация доступна до 1 октября 2024 года.</p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #4CAF50; color: white;">
+                    Контактная информация
+                </div>
+                <div class="card-body">
+                    <p>Если у вас возникли вопросы, пожалуйста, свяжитесь с нами:</p>
+                    <ul class="list-unstyled">
+                        <li>Email: <a href="mailto:info@chesslondon2024.com">info@chesslondon2024.com</a></li>
+                        <li>Телефон: +44 123 456 789</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'register_tournament' tournament.id %}" class="btn btn-success btn-lg">Регистрация на турнир</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="btn btn-success btn-lg">Войдите, чтобы зарегистрироваться</a>
+                {% endif %}
+            </div>
+        </div>
+
+    {% endblock %}

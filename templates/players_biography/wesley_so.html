@@ -1,0 +1,55 @@
+{% extends 'MainChess/base.html' %}
+
+{% block content %}
+    {% load static %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2 class="mb-4" style="color: #4CAF50;">Уэсли Со</h2>
+            <p class="lead">Один из сильнейших филиппино-американских шахматистов</p>
+        </div>
+    </div>
+
+    <!-- Основная информация -->
+    <div class="row mb-4" style="background-color: #F8F3FF; padding: 20px; border-radius: 10px;">
+        <div class="col-md-4">
+            <img src="{% static 'images/walesy.jfif' %}" class="img-fluid rounded shadow" alt="Уэсли Со">
+        </div>
+        <div class="col-md-8">
+            <h4>Биография</h4>
+            <p>Уэсли Со, филиппино-американский шахматный гроссмейстер, родился 9 октября 1993 года. Он считается одним из самых стабильных шахматистов мира. Со стал чемпионом США в 2017 году, а также победил на многих международных турнирах.</p>
+        </div>
+    </div>
+
+    <!-- Достижения и факты -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4>Основные достижения</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fas fa-medal" style="color: #4CAF50;"></i> Чемпион США по шахматам (2017).</li>
+                <li class="list-group-item"><i class="fas fa-trophy" style="color: #4CAF50;"></i> Победитель Кубка Синкфилда (2016).</li>
+                <li class="list-group-item"><i class="fas fa-chess-king" style="color: #4CAF50;"></i> Победитель многочисленных международных турниров.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h4>Интересные факты</h4>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-book-reader" style="color: #4CAF50;"></i> Со активно занимается самообразованием и считает шахматы искусством.</li>
+                <li><i class="fas fa-globe" style="color: #4CAF50;"></i> Он активно продвигает шахматы среди молодежи и часто проводит мастер-классы.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Стиль игры и личная жизнь -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4>Стиль игры</h4>
+            <p>Уэсли Со — мастер защиты и точных стратегических планов. Его игра характеризуется спокойствием и аккуратностью, что позволяет ему избегать ошибок и достигать лучших результатов в сложных позициях.</p>
+        </div>
+        <div class="col-md-6">
+            <h4>Личная жизнь и интересы</h4>
+            <p>Уэсли активно занимается благотворительностью и помогает организовывать шахматные турниры для детей и молодежи.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

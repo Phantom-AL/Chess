@@ -1,0 +1,37 @@
+.player-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.player-profile {
+    flex: 1 1 calc(33.333% - 40px); /* Ширина одной карточки - 33.333% минус отступ */
+    max-width: 300px; /* Максимальная ширина карточки */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.player-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+}

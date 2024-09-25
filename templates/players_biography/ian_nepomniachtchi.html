@@ -1,0 +1,56 @@
+{% extends 'MainChess/base.html' %}
+
+{% block content %}
+    {% load static %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2 class="mb-4" style="color: #009688;">Ян Непомнящий</h2>
+            <p class="lead">Претендент на титул чемпиона мира в 2021 и 2023 годах</p>
+        </div>
+    </div>
+
+    <!-- Основная информация с картинкой -->
+    <div class="row mb-4" style="background-color: #F8F3FF; padding: 20px; border-radius: 10px;">
+        <div class="col-md-4">
+            <img src="{% static 'images/ian.jfif' %}" class="img-fluid rounded shadow" alt="Ян Непомнящий">
+        </div>
+        <div class="col-md-8">
+            <h4>Биография</h4>
+            <p>Ян Непомнящий, российский шахматный гроссмейстер, родился 14 июля 1990 года. Он является претендентом на титул чемпиона мира дважды, в 2021 и 2023 годах. Известен своим быстрым и агрессивным стилем игры, он является одним из ведущих шахматистов России.</p>
+        </div>
+    </div>
+
+    <!-- Достижения и интересные факты -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4>Основные достижения</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fas fa-trophy" style="color: #009688;"></i> Претендент на титул чемпиона мира (2021, 2023).</li>
+                <li class="list-group-item"><i class="fas fa-medal" style="color: #009688;"></i> Победитель турнира претендентов (2021).</li>
+                <li class="list-group-item"><i class="fas fa-chess-king" style="color: #009688;"></i> Чемпион России по шахматам (2010, 2020).</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h4>Интересные факты</h4>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-chess-board" style="color: #009688;"></i> Ян также является мастером по компьютерным играм и активно играет в «Dota 2».</li>
+                <li><i class="fas fa-stopwatch" style="color: #009688;"></i> Он известен своим быстрым принятием решений за доской, что делает его сильным игроком в блиц.</li>
+                <li><i class="fas fa-globe" style="color: #009688;"></i> Ян является одним из ведущих шахматистов, активно продвигающих шахматы через свои социальные сети.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Стиль игры и личная жизнь -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4>Стиль игры</h4>
+            <p>Ян Непомнящий отличается агрессивным и динамичным стилем игры. Он любит создавать острые позиции, что позволяет ему находить нестандартные ходы и ставить противников в сложные ситуации.</p>
+        </div>
+        <div class="col-md-6">
+            <h4>Личная жизнь и интересы</h4>
+            <p>Помимо шахмат, Ян увлекается компьютерными играми и киберспортом. Он активно участвует в благотворительных инициативах и занимается развитием шахмат среди молодежи.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'MainChess/base.html' %}
+
+{% block content %}
+    {% load static %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2 class="mb-4" style="color: #2196F3;">Максим Вашье-Лаграв</h2>
+            <p class="lead">Французский гроссмейстер с уникальным атакующим стилем</p>
+        </div>
+    </div>
+
+    <!-- Основная информация с картинкой -->
+   <div class="row mb-4" style="background-color: #F8F3FF; padding: 20px; border-radius: 10px;">
+        <div class="col-md-4">
+            <img src="{% static 'images/maxim.jfif' %}" class="img-fluid rounded shadow" alt="Максим Вашье-Лаграв">
+        </div>
+        <div class="col-md-8">
+            <h4>Биография</h4>
+            <p>Максим Вашье-Лаграв — французский шахматный гроссмейстер, родился 21 октября 1990 года. Он является одним из ведущих шахматистов Европы и известен своими атакующими партиями и нестандартными дебютами.</p>
+        </div>
+    </div>
+
+    <!-- Достижения и стиль игры -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4>Основные достижения</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fas fa-chess-king" style="color: #2196F3;"></i> Чемпион Франции (2007, 2011).</li>
+                <li class="list-group-item"><i class="fas fa-trophy" style="color: #2196F3;"></i> Победитель турнира претендентов (2020).</li>
+                <li class="list-group-item"><i class="fas fa-medal" style="color: #2196F3;"></i> Победитель крупных международных турниров, включая турниры по быстрым шахматам.</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h4>Стиль игры</h4>
+            <p>Максим Вашье-Лаграв известен своим атакующим стилем и стремлением к острым позициям. Он любит создавать сложные тактические ситуации, где его аналитические навыки особенно проявляются.</p>
+        </div>
+    </div>
+
+    <!-- Личная жизнь и интересы -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h4>Личная жизнь и интересы</h4>
+            <p>Максим активно участвует в шахматной жизни Франции и Европы. В свободное время он увлекается чтением и изучением истории шахмат.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

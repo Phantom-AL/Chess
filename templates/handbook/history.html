@@ -1,0 +1,170 @@
+{% extends 'MainChess/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <style>
+        /* Стили для аккордеона */
+        .accordion-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .arrow.collapsed {
+            transform: rotate(180deg);
+        }
+    </style>
+    <div class="container my-5">
+    <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+        <!-- Заголовок страницы -->
+        <div class="text-center mb-5">
+            <h2 class="display-4 fw-bold">История шахмат</h2>
+            <p class="lead">От древних времен до современности</p>
+        </div>
+
+        <!-- Карточка с кратким описанием истории шахмат -->
+        <div class="card shadow-lg mb-4">
+            <div class="card-body">
+                <p class="card-text">Шахматы – это игра с историей, уходящей на полторы тысячи лет в прошлое.
+                    Она возникла в Индии под названием "чатуранга", а затем прошла через века, эволюционируя и
+                    распространяясь по миру.</p>
+            </div>
+        </div>
+
+        <!-- Основные вехи истории -->
+        <h3 class="text-center mt-5">Основные вехи истории шахмат</h3>
+        <div class="row row-cols-1 row-cols-md-2 g-4 mt-3">
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">VI век</h5>
+                        <p class="card-text">Появление чатуранги в Индии – первой формы шахмат.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">VII–IX века</h5>
+                        <p class="card-text">Распространение игры через Персию в арабские страны.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Средневековье</h5>
+                        <p class="card-text">Шахматы приходят в Европу и эволюционируют до современных
+                            правил.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">XX век</h5>
+                        <p class="card-text">Рост популярности шахмат, появление чемпионатов мира.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Интересные факты о шахматах -->
+
+        <div class="container my-5">
+            <h3 class="text-center mt-5">Интересные факты</h3>
+            <div class="accordion mt-3" id="factsAccordion">
+                <!-- Первый факт -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="factOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Множество комбинаций ходов
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="factOne"
+                         data-bs-parent="#factsAccordion">
+                        <div class="accordion-body">
+                            Существует более 318 миллиардов возможных комбинаций ходов на первых четырех ходах каждого
+                            игрока.
+                        </div>
+                    </div>
+                </div>
+                <!-- Второй факт -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="factTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Первый компьютер-чемпион
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="factTwo"
+                         data-bs-parent="#factsAccordion">
+                        <div class="accordion-body">
+                            Первый компьютер, который обыграл чемпиона мира по шахматам – IBM Deep Blue, победивший
+                            Гарри Каспарова в 1997 году.
+                        </div>
+                    </div>
+                </div>
+                <!-- Третий факт -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="factThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Самая длинная партия
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="factThree"
+                         data-bs-parent="#factsAccordion">
+                        <div class="accordion-body">
+                            Самая длинная возможная партия в шахматах может длиться 5949 ходов!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Изображение -->
+        <div class="text-center mt-5">
+            <img src="{% static 'images/history.jpg' %}" alt="История шахмат" class="img-fluid rounded shadow-sm">
+            <p class="text-muted mt-3">Иллюстрация древней шахматной игры</p>
+        </div>
+
+        <!-- Шахматы в культуре -->
+        <h3 class="text-center mt-5">Шахматы в культуре</h3>
+        <div class="card shadow-lg mb-4">
+            <div class="card-body">
+                <p>Шахматы глубоко интегрированы в мировую культуру, присутствуя в книгах, фильмах и искусстве. Один из
+                    примеров – фильм "Поединок на века", рассказывающий о матче между Борисом Спасским и Бобби
+                    Фишером.</p>
+            </div>
+        </div>
+
+        <!-- Заключение -->
+        <h3 class="text-center mt-5">Заключение</h3>
+        <div class="card shadow-lg mb-4">
+            <div class="card-body text-center">
+                <p>Шахматы – это не просто игра, это интеллектуальный спорт, который пережил века и продолжает
+                    вдохновлять поколения игроков по всему миру.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.accordion-button').forEach(function (button) {
+            button.addEventListener('click', function () {
+                let arrow = this.querySelector('.arrow');
+                arrow.classList.toggle('collapsed');
+            });
+        });
+    </script>
+{% endblock %}

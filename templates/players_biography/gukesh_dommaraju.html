@@ -1,0 +1,65 @@
+{% extends 'MainChess/base.html' %}
+
+{% block content %}
+    {% load static %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2 class="mb-4" style="color: #FF5722;">Гукеш Доммараджу</h2>
+            <p class="lead">Индийский шахматный гроссмейстер, один из самых молодых гроссмейстеров в истории</p>
+        </div>
+    </div>
+
+    <!-- Основная информация с карточкой и фоном -->
+    <div class="row mb-4" style="background-color: #F5F5F5; padding: 20px; border-radius: 10px;">
+        <div class="col-md-4">
+            <img src="{% static 'images/gukesh.jfif' %}" class="img-fluid rounded shadow" alt="Гукеш Доммараджу">
+        </div>
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h4 class="card-title" style="color: #FF5722;">Биография</h4>
+                    <p class="card-text">Гукеш Доммараджу родился 29 мая 2006 года в Ченнаи, Индия. В 12 лет он уже получил звание международного мастера, а в 15 лет стал гроссмейстером, одним из самых молодых в истории шахмат. Его невероятный талант и быстрый рост на мировой шахматной арене вызвал большое внимание.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Достижения с иконками -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h4>Основные достижения</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fas fa-trophy" style="color: #FF5722;"></i> Победитель Chess Olympiad Gold (2022 г.)</li>
+                <li class="list-group-item"><i class="fas fa-chess-king" style="color: #FF5722;"></i> Один из самых молодых гроссмейстеров в мире (в 15 лет)</li>
+                <li class="list-group-item"><i class="fas fa-medal" style="color: #FF5722;"></i> Победитель многих международных турниров и молодежных чемпионатов</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Стиль игры и интересные факты -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4>Стиль игры</h4>
+            <p>Гукеш известен своим агрессивным стилем игры, блестящими тактическими ударами и нестандартными решениями в сложных позициях. Он часто стремится к активной игре и не боится рисковать ради победы.</p>
+        </div>
+        <div class="col-md-6">
+            <h4>Интересные факты</h4>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-book-reader" style="color: #FF5722;"></i> Гукеш увлекается историей шахмат и любит анализировать партии легендарных игроков.</li>
+                <li><i class="fas fa-trophy" style="color: #FF5722;"></i> В возрасте 15 лет и 4 месяцев он стал третьим самым молодым гроссмейстером в мире на момент получения звания.</li>
+                <li><i class="fas fa-balance-scale" style="color: #FF5722;"></i> Его кумиры в шахматах — Вишванатан Ананд и Магнус Карлсен.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Личная жизнь и интересы -->
+    <div class="row mb-4">
+        <div class="col-md-12">
+            <h4>Личная жизнь и интересы</h4>
+            <p>Гукеш активно участвует в шахматных турнирах по всему миру и работает над улучшением своих навыков. В свободное время он увлекается математикой и любит играть в футбол с друзьями.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+    

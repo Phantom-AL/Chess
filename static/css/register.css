@@ -1,0 +1,115 @@
+.bform {
+    font-family: "Montserrat", sans-serif;
+    color: #8d97ad;
+    font-weight: 300;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Центрирование по вертикали */
+    background-color: #f5f5f5;
+}
+
+.bform h2 {
+    color: #3e4555;
+    text-align: center;
+    font-weight: 400;
+}
+
+.bform .form-group {
+    margin-bottom: 20px;
+}
+
+.bform input.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.bform .btn-danger-gradiant {
+    background: #ff4d7e;
+    background: linear-gradient(to right, #ff4d7e 0%, #ff6a5b 100%);
+    padding: 15px 45px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.bform .btn-danger-gradiant:hover {
+    background: #ff6a5b;
+    background: linear-gradient(to right, #ff6a5b 0%, #ff4d7e 100%);
+}
+
+.bform {
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center; /* Центрирует кнопку по горизонтали */
+}
+
+
+.bg-facebook {
+    background-color: #3b5998; /* Цвет фона Facebook */
+    color: white; /* Цвет текста */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.bg-twitter {
+    background-color: #1da1f2; /* Цвет фона Twitter */
+    color: white; /* Цвет текста */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.bg-facebook:hover {
+    background-color: #334d84; /* Темнее при наведении для Facebook */
+}
+
+.bg-twitter:hover {
+    background-color: #1991db; /* Темнее при наведении для Twitter */
+}
+
+.bform .contact-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center; /* Центрирует кнопки по горизонтали */
+}
+
+.bg-facebook,
+.bg-twitter {
+    margin: 0 5px; /* Уменьшает пространство между кнопками */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 767px) {
+    .bform {
+        padding: 20px;
+    }
+
+    .bform .contact-form {
+        padding: 20px;
+    }
+}
+

@@ -1,0 +1,82 @@
+{% extends 'MainChess/base.html' %}
+
+{% block content %}
+    <div class="container mt-5">
+        <div class="jumbotron">
+            <h1 class="display-4 text-center" style="color: #4CAF50;">{{ tournament.name }}</h1>
+            <p class="lead text-center">Добро пожаловать на международный шахматный турнир, который пройдет в {{ tournament.location }} {{ tournament.date }}!</p>
+            <hr class="my-4">
+            <p class="text-center">Дата: <strong>{{ tournament.date }}</strong></p>
+            <p class="text-center">Местоположение: <strong>{{ tournament.location }}</strong></p>
+            <p class="text-center">Участников: <strong>{{ tournament.current_participants }}</strong> / <strong>{{ tournament.max_participants }}</strong></p>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header" style="background-color: #4CAF50; color: white;">
+                Призовой фонд
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ tournament.prize_fund }}</h5>
+                <p class="card-text">{{ tournament.prize_description }}</p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header" style="background-color: #4CAF50; color: white;">
+                Правила турнира
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ tournament.rules_title }}</h5>
+                <p class="card-text">{{ tournament.rules_description }}</p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header" style="background-color: #4CAF50; color: white;">
+                Программа турнира
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    {% if tournament.schedule_events.all %}
+                        {% for event in tournament.schedule_events.all %}
+                            <li class="list-group-item">{{ event.time }}: {{ event.description }}</li>
+                        {% endfor %}
+                    {% else %}
+                        <li class="list-group-item">Нет запланированных событий.</li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header" style="background-color: #4CAF50; color: white;">
+                Дополнительная информация
+            </div>
+            <div class="card-body">
+                <p>{{ tournament.additional_info }}</p>
+                <p>{{ tournament.registration_info }}</p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-header" style="background-color: #4CAF50; color: white;">
+                Контактная информация
+            </div>
+            <div class="card-body">
+                <p>Если у вас возникли вопросы, пожалуйста, свяжитесь с нами:</p>
+                <ul class="list-unstyled">
+                    <li>Email: <a href="mailto:{{ tournament.contact_email }}">{{ tournament.contact_email }}</a></li>
+                    <li>Телефон: {{ tournament.contact_phone }}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center">
+            {% if user.is_authenticated %}
+                <a href="{% url 'register_tournament' tournament.id %}" class="btn btn-success btn-lg">Регистрация на турнир</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-success btn-lg">Войдите, чтобы зарегистрироваться</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

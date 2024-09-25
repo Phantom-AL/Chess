@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>{% block title %}base{% endblock %}</title>
+    {% load static %}
+    <!-- Подключаем только одну версию Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/advice.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" href="{% static 'css/players.css' %}">
+    <link rel="stylesheet" href="{% static 'css/player_profile.css' %}">
+    <script src="https://kit.fontawesome.com/aae43852f3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header-content">
+            <a href="{% url 'home' %}" class="logo">
+                <i class="fa-solid fa-chess"></i>
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="{% url 'handbook' %}" class="nav-link text-secondary">Справочник</a></li>
+                    <li><a href="{% url 'advice' %}" class="nav-link text-secondary">Советы</a></li>
+                    <li><a href="{% url 'players' %}" class="nav-link text-secondary">Игроки</a></li>
+                </ul>
+            </nav>
+
+           <div class="auth-buttons dropdown">
+    {% if user.is_authenticated %}
+        <div class="d-flex align-items-center dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            {% if user.player.avatar %}
+                <img src="{{ user.player.avatar.url }}" alt="Player Avatar" class="rounded-circle me-2" width="40" height="40">
+            {% else %}
+                <i class="fa-solid fa-user me-2" style="font-size: 24px;"></i>
+            {% endif %}
+        </div>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li>
+                <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="dropdown-item">Выйти</button>
+                </form>
+            </li>
+            <!-- Добавьте другие пункты меню здесь -->
+        </ul>
+    {% else %}
+        <a href="{% url 'login' %}" class="btn btn-dark">Войти</a>
+        <a href="{% url 'register' %}" class="btn btn-success">Регистрация</a>
+    {% endif %}
+</div>
+        </div>
+    </header>
+
+    <main class="content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% block footer %}
+        <footer class="footer">
+            <p><a href="/contact">Контакты</a> | <a href="/privacy-policy">Политика конфиденциальности</a> | <a
+                    href="/terms-of-service">Условия использования</a></p>
+            <p>Следите за нами:
+                <a href="https://vk.com/yourpage" target="_blank">VK</a> |
+                <a href="https://twitter.com/yourpage" target="_blank">Twitter</a> |
+                <a href="https://facebook.com/yourpage" target="_blank">Facebook</a>
+            </p>
+        </footer>
+    {% endblock %}
+</div>
+
+<!-- Подключаем JavaScript для Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

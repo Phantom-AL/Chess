@@ -1,0 +1,61 @@
+/* Стили для фона страницы */
+
+
+
+.page-background {
+    background-color: #f0f0f0; /* Цвет фона страницы */
+    background-image: url('{% static "images/background-image.jpg" %}');
+    background-size: cover; /* Покрытие всего фона */
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat; /* Не повторяем изображение */
+    padding: 40px; /* Отступы вокруг содержимого */
+    font-family: 'Arial', sans-serif; /* Шрифт страницы */
+    color: #333; /* Цвет текста */
+}
+
+/* Стили для контейнера с контентом */
+.content-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+    padding: 40px; /* Отступы внутри контейнера */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+}
+
+/* Стили для заголовка и параграфа в шапке */
+.welcome-header {
+    text-align: center; /* Выравнивание текста по центру */
+    margin-bottom: 50px; /* Отступ снизу */
+}
+
+.welcome-header h1 {
+    font-size: 36px;
+    color: #444;
+}
+
+
+
+.welcome-header p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Стили для секций информации */
+.info-section {
+    max-width: 800px; /* Максимальная ширина секций */
+    margin: 0 auto; /* Центрирование секций */
+    margin-bottom: 40px; /* Отступ снизу */
+    background-color: #ffffff; /* Белый фон секций */
+    padding: 20px; /* Отступы внутри секций */
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Тень для секций */
+}
+
+.info-section h2 {
+    color: #007acc; /* Цвет заголовков секций */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.info-section p {
+    line-height: 1.6; /* Межстрочный интервал */
+    margin-bottom: 20px; /* Отступ снизу */
+}

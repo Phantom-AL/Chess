@@ -1,0 +1,55 @@
+{% extends 'MainChess/base.html' %}
+
+{% block content %}
+    {% load static %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2 class="mb-4" style="color: #FF9800;">Хикару Накамура</h2>
+            <p class="lead">Мастер блица и популярный шахматный стример</p>
+        </div>
+    </div>
+
+    <!-- Основная информация с картинкой и фоном -->
+    <div class="row mb-4" style="background-color: #FFF3E0; padding: 20px; border-radius: 10px;">
+        <div class="col-md-4">
+            <img src="{% static 'images/hikaru.jfif' %}" class="img-fluid rounded shadow" alt="Хикару Накамура">
+        </div>
+        <div class="col-md-8">
+            <h4>Биография</h4>
+            <p>Хикару Накамура, американский шахматный гроссмейстер японского происхождения, родился 9 декабря 1987 года. Он один из лучших игроков блица в мире и широко известен благодаря своим стримам на Twitch, где он привлекает внимание тысяч зрителей.</p>
+        </div>
+    </div>
+
+    <!-- Достижения и интересные факты -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4>Основные достижения</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="fas fa-chess-clock" style="color: #FF9800;"></i> Пятикратный чемпион США по шахматам.</li>
+                <li class="list-group-item"><i class="fas fa-chess-king" style="color: #FF9800;"></i> Один из лучших игроков в блиц на Chess.com.</li>
+                <li class="list-group-item"><i class="fas fa-medal" style="color: #FF9800;"></i> Участник турнира претендентов (2016, 2022).</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h4>Интересные факты</h4>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-video" style="color: #FF9800;"></i> Хикару — популярный стример на Twitch, где делится своими шахматными партиями и анализами.</li>
+                <li><i class="fas fa-users" style="color: #FF9800;"></i> Он активно привлекает новую аудиторию к шахматам благодаря своему яркому и харизматичному стилю ведения стримов.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Стиль игры и личная жизнь -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h4>Стиль игры</h4>
+            <p>Накамура — один из лучших блиц-игроков в мире. Его стиль игры отличается агрессивностью и быстрыми расчетами. Он прекрасно владеет тактикой и умеет мгновенно принимать решения в сложных позициях.</p>
+        </div>
+        <div class="col-md-6">
+            <h4>Личная жизнь и интересы</h4>
+            <p>Хикару Накамура активно участвует в шахматных турнирах и ведет свою стримерскую карьеру. В свободное время он увлекается видеоиграми и путешествиями.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

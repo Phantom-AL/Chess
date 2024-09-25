@@ -1,0 +1,151 @@
+{% extends 'MainChess/base.html' %}
+
+{% block content %}
+    {% load static %}
+    <div class="container mt-5">
+        <!-- Заголовок страницы -->
+        <h1 class="text-center mb-5 text-dark">Правила игры в шахматы</h1>
+
+        <!-- Основные правила игры -->
+        <div class="row text-center">
+            <div class="col-md-6">
+                <h3>Основные правила игры</h3>
+                <p>Шахматы — настольная игра для двух игроков, играющаяся на доске размером 8x8 клеток. Цель игры —
+                    поставить мат королю противника.</p>
+            </div>
+
+            <!-- Добавим картинку шахматной доски -->
+            <div class="col-md-6 text-center">
+                <img src="{% static 'images/board.jpg' %}" alt="Шахматная доска" class="img-fluid"
+                     style="max-width: 60%; height: auto;">
+            </div>
+        </div>
+
+        <!-- Фигуры и их ходы -->
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h3 class="mb-4">Фигуры и их ходы</h3>
+
+                <!-- Карты с фигурами -->
+                <div class="row">
+                    <!-- Пешка -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-header"><strong>Пешка</strong></div>
+                            <div class="card-body">
+                                <p>Двигается на одну клетку вперед, может двигаться на две клетки вперед при первом
+                                    ходе. Бьет по диагонали на одну клетку вперед.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Конь -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-header"><strong>Конь</strong></div>
+                            <div class="card-body">
+                                <p>Ходит буквой "Г", перемещается на две клетки по одному направлению и на одну по
+                                    другому.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Слон -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-header"><strong>Слон</strong></div>
+                            <div class="card-body">
+                                <p>Ходит по диагоналям на любое количество клеток.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ладья -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-header"><strong>Ладья</strong></div>
+                            <div class="card-body">
+                                <p>Двигается по горизонталям и вертикалям на любое количество клеток.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ферзь -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-header"><strong>Ферзь</strong></div>
+                            <div class="card-body">
+                                <p>Самая сильная фигура, двигается по вертикалям, горизонталям и диагоналям на любое
+                                    количество клеток.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Король -->
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-header"><strong>Король</strong></div>
+                            <div class="card-body">
+                                <p>Двигается на одну клетку в любом направлении.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Дополнительные правила -->
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h3 class="mb-4">Дополнительные правила</h3>
+
+                <!-- Карты с дополнительными правилами -->
+                <div class="row">
+                    <!-- Рокировка -->
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header"><strong>Рокировка</strong></div>
+                            <div class="card-body">
+                                <p>Король и ладья могут поменяться местами при соблюдении ряда условий: король и ладья
+                                    не двигались ранее, между ними нет других фигур, король не находится под шахом.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Взятие на проходе -->
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header"><strong>Взятие на проходе</strong></div>
+                            <div class="card-body">
+                                <p>Пешка может взять пешку противника, переместившуюся на две клетки вперед с исходной
+                                    позиции, как если бы она сделала это за два хода.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Преобразование пешки -->
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header"><strong>Преобразование пешки</strong></div>
+                            <div class="card-body">
+                                <p>Когда пешка достигает противоположной стороны доски, она может быть превращена в
+                                    любую другую фигуру, кроме короля, чаще всего — в ферзя.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ничья -->
+                    <div class="col-md-6">
+                        <div class="card mb-4">
+                            <div class="card-header"><strong>Ничья</strong></div>
+                            <div class="card-body">
+                                <p>Игра заканчивается вничью, если ни один из игроков не может поставить мат или игроки
+                                    согласились на ничью.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

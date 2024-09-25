@@ -1,0 +1,78 @@
+{% extends 'MainChess/base.html' %}
+
+{% block content %}
+    {% if messages %}
+    <div class="toast-container position-fixed start-50 translate-middle-x" style="top: 80px; z-index: 11;">
+        <div class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true" id="successToast">
+            <div class="d-flex">
+                <div class="toast-body">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4" style="color: #4CAF50;">Текущие Турниры</h1>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-striped table-bordered">
+                    <thead style="background-color: #4CAF50; color: white;">
+                    <tr>
+                        <th>Название</th>
+                        <th>Дата</th>
+                        <th>Местоположение</th>
+                        <th>Участники</th>
+                        <th>Действия</th>
+                    </tr>
+                    </thead>
+
+
+                    <tbody>
+                    {% for tournament in tournaments %}
+                        <tr>
+                            <td>{{ tournament.name }}</td>
+                            <td>{{ tournament.date }}</td>
+                            <td>{{ tournament.location }}</td>
+                            <td>{{ tournament.current_participants }}/{{ tournament.max_participants }}</td>
+                            <td><a href="{% url 'tournament_detail' tournament.id %}" class="btn btn-hover btn-sm"
+                                   style="background-color: #4CAF50; color: white;">Подробнее</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        .btn-hover {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-hover:hover {
+            background-color: #45a049; /* Немного светлее зеленый цвет */
+            transform: scale(1.05); /* Увеличение кнопки на 5% */
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var toastElement = document.getElementById('successToast');
+            if (toastElement) {
+                var toast = new bootstrap.Toast(toastElement, {
+                    delay: 3000 // 3 секунды
+                });
+                toast.show();
+            }
+        });
+    </script>
+
+{% endblock %}

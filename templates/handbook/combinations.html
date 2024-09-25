@@ -1,0 +1,86 @@
+{% extends 'MainChess/base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h1 class="display-3" style="color: #673ab7;">Шахматные комбинации</h1>
+        <p class="lead">Овладение шахматными комбинациями позволит вам доминировать на доске и выигрывать сложные партии. Изучите самые эффективные тактики.</p>
+    </div>
+
+    <!-- Комбинация 1: Вилка -->
+    <div class="row bg-light p-5 mb-4 shadow-sm rounded">
+        <div class="col-md-3 text-center">
+            <i class="fas fa-chess-knight fa-5x" style="color: #673ab7;"></i>
+        </div>
+        <div class="col-md-9">
+            <h2 style="color: #673ab7;">Вилка на короля и ферзя</h2>
+            <p class="text-muted">Одна из самых распространённых тактик, когда конь атакует короля и ферзя одновременно, вынуждая соперника терять важную фигуру.</p>
+        </div>
+    </div>
+
+    <!-- Комбинация 2: Связка -->
+    <div class="row bg-white p-5 mb-4 shadow-sm rounded">
+        <div class="col-md-3 text-center">
+            <i class="fas fa-chess-bishop fa-5x" style="color: #f44336;"></i>
+        </div>
+        <div class="col-md-9">
+            <h2 style="color: #f44336;">Связка</h2>
+            <p class="text-muted">Когда одна фигура не может покинуть линию или диагональ из-за угрозы более ценной фигуре позади нее. Часто применяется слонами и ферзём.</p>
+        </div>
+    </div>
+
+    <!-- Комбинация 3: Открытый шах -->
+    <div class="row bg-light p-5 mb-4 shadow-sm rounded">
+        <div class="col-md-3 text-center">
+            <i class="fas fa-chess-queen fa-5x" style="color: #4caf50;"></i>
+        </div>
+        <div class="col-md-9">
+            <h2 style="color: #4caf50;">Открытый шах</h2>
+            <p class="text-muted">Прием, когда одна фигура атакует короля, после того как другая фигура освобождает ей линию атаки. Может привести к внезапному поражению противника.</p>
+        </div>
+    </div>
+
+    <!-- Комбинация 4: Двойной удар -->
+    <div class="row bg-white p-5 mb-4 shadow-sm rounded">
+        <div class="col-md-3 text-center">
+            <i class="fas fa-chess-rook fa-5x" style="color: #ff9800;"></i>
+        </div>
+        <div class="col-md-9">
+            <h2 style="color: #ff9800;">Двойной удар</h2>
+            <p class="text-muted">Когда одна фигура атакует сразу две фигуры соперника, заставляя его терять одну из них. Эффективно на всех стадиях игры.</p>
+        </div>
+    </div>
+
+    <!-- Комбинация 5: Рентген -->
+    <div class="row bg-light p-5 mb-4 shadow-sm rounded">
+        <div class="col-md-3 text-center">
+            <i class="fas fa-chess-king fa-5x" style="color: #ff5722;"></i>
+        </div>
+        <div class="col-md-9">
+            <h2 style="color: #ff5722;">Рентген</h2>
+            <p class="text-muted">Когда фигура угрожает атакой через другую фигуру или пешку, создавая давление на позицию соперника и заставляя его совершать ошибки.</p>
+        </div>
+    </div>
+
+    <!-- Комбинация 6: Зевок -->
+    <div class="row bg-white p-5 mb-4 shadow-sm rounded">
+        <div class="col-md-3 text-center">
+            <i class="fas fa-chess-pawn fa-5x" style="color: #00bcd4;"></i>
+        </div>
+        <div class="col-md-9">
+            <h2 style="color: #00bcd4;">Зевок</h2>
+            <p class="text-muted">Ошибка, при которой игрок оставляет одну из своих фигур под ударом противника, что может привести к её потере.</p>
+        </div>
+    </div>
+
+    <!-- Мотивирующая цитата -->
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <blockquote class="blockquote">
+                <p class="mb-3" style="font-size: 1.5rem;">"Лучшие комбинации всегда рождаются из чистого расчета."</p>
+                <footer class="blockquote-footer">Гарри Каспаров</footer>
+            </blockquote>
+        </div>
+    </div>
+</div>
+{% endblock %}

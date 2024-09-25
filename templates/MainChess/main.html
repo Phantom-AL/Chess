@@ -1,0 +1,59 @@
+{% extends 'MainChess/base.html' %}
+{% load static %}
+
+{% block title %}
+	MainMenu
+{% endblock %}
+
+{% block content %}
+
+<div style="background-image: url('{% static "images/background-image.jpg" %}'); background-size: contain; background-position: center; background-repeat: no-repeat; padding: 40px; font-family: 'Arial', sans-serif; color: #333;">
+    <div style="background-color: rgba(255, 255, 255, 0); padding: 40px; border-radius: 10px;">
+        <header style="text-align: center; margin-bottom: 50px;">
+            <h1 style="font-size: 36px; color: #444;">Добро пожаловать на шахматный портал</h1>
+            <p style="font-size: 18px; color: #666;">Здесь вы найдете всё, что нужно знать о шахматах – от истории до современных стратегий.</p>
+        </header>
+
+        <section style="max-width: 800px; margin: 0 auto; margin-bottom: 40px; background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: rebeccapurple; margin-bottom: 20px;">О шахматах</h2>
+            <p style="line-height: 1.6; margin-bottom: 20px;">
+                Шахматы — это настольная игра, которая имеет тысячелетнюю историю. Эта игра сочетает в себе элементы искусства, науки и спорта. В шахматах важны как стратегическое планирование, так и тактическое мышление. Многие известные шахматисты достигли высот благодаря способности предвидеть ходы противника и создавать уникальные комбинации.
+            </p>
+            <p style="line-height: 1.6; margin-bottom: 20px;">
+                Игра в шахматы развивает аналитическое мышление, улучшает память и учит принимать обдуманные решения. Шахматы также являются одним из самых популярных видов спорта, с миллионами поклонников по всему миру и многочисленными турнирами, которые привлекают внимание зрителей и прессы.
+            </p>
+        </section>
+
+        <section style="max-width: 800px; margin: 0 auto; margin-bottom: 40px; background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: rebeccapurple; margin-bottom: 20px;">История шахмат</h2>
+            <p style="line-height: 1.6; margin-bottom: 20px;">
+                История шахмат насчитывает более полутора тысяч лет. Считается, что игра возникла в Индии в VI веке нашей эры под названием «чатуранга». Эта игра была прообразом современных шахмат и включала элементы, символизирующие четыре рода войск: пехоту, кавалерию, слонов и колесницы.
+            </p>
+            <p style="line-height: 1.6; margin-bottom: 20px;">
+                Постепенно игра распространилась по всему миру, приняв различные формы и правила. В средние века шахматы стали популярными в Европе, где они превратились в игру, которую мы знаем сегодня. В XIX веке начали проводиться первые международные турниры, а в XX веке шахматы получили официальный статус спорта.
+            </p>
+        </section>
+
+        <section style="max-width: 800px; margin: 0 auto; margin-bottom: 40px; background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: rebeccapurple; margin-bottom: 20px;">Современные шахматы</h2>
+            <p style="line-height: 1.6; margin-bottom: 20px;">
+                В наши дни шахматы играются по всему миру, и благодаря интернету миллионы людей могут участвовать в онлайн-играх и турнирах. Современные шахматы также становятся всё более популярными благодаря различным шахматным стримам, обучающим видео и программам для анализа партий.
+            </p>
+            <p style="line-height: 1.6; margin-bottom: 20px;">
+                Одним из важнейших событий в мире шахмат является матч на звание чемпиона мира, который привлекает внимание миллионов людей. Шахматы продолжают развиваться, оставаясь одной из самых интеллектуальных и увлекательных игр в истории человечества.
+            </p>
+        </section>
+
+        <section style="max-width: 800px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+            <h2 style="color: rebeccapurple; margin-bottom: 20px;">Психология в шахматах</h2>
+            <p style="line-height: 1.6; margin-bottom: 20px;">
+                Психология играет важную роль в шахматах. Умение сохранять концентрацию, контролировать эмоции и предвидеть психологическое состояние соперника может стать ключом к победе. Шахматы учат дисциплине и терпению, развивают способность принимать обдуманные решения под давлением.
+            </p>
+            <p style="line-height: 1.6;">
+                Многие шахматисты используют специальные техники для тренировки психологической устойчивости, такие как медитация и визуализация. Умение противостоять стрессу и поддерживать позитивный настрой помогает добиваться успеха как на шахматной доске, так и в жизни.
+            </p>
+        </section>
+    </div>
+</div>
+
+{% endblock %}
